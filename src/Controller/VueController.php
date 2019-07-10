@@ -37,10 +37,7 @@ class VueController extends Controller
             ->setFrom('send@example.com')
             ->setTo('ka_rax@hotmail.com')
             ->setBody(
-                $this->renderView(
-                    'vue/index.html.twig',
-                ),
-                'text/html'
+                $this->renderView('vue/index.html.twig' ), 'text/html'
             );
 
 //            /*
