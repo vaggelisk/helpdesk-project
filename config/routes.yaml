@@ -1,0 +1,12 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+helpdesk_member_dashboard_vag:
+    path:       /en/member/dashboardVag
+    controller: Webkul\UVDesk\CoreBundle\Controller\Account::loadDashboard
+
+helpdesk_member_profile_vag:
+    path:     /en/member/profileVag
+    controller: Webkul\UVDesk\CoreBundle\Controller\Account::loadProfile
+    defaults: { panelId: 'account' }

@@ -1,0 +1,10 @@
+swiftmailer:
+    mailers:
+        mailer_7801:
+            transport: gmail
+            username: evangelos.karakaxis@gmail.com
+            password: Doxa21ou!!
+            # sender_address: ~
+            # delivery_addresses: ~
+            disable_delivery: false
+
