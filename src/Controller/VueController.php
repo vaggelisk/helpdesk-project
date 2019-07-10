@@ -26,6 +26,7 @@ class VueController extends Controller
         $account->loadDashboard();
     }
 
+
     /**
      * @Route("/sendEmail")
      * @param \Swift_Mailer $mailer
