@@ -7,7 +7,7 @@
 /.env.*.local
 /.idea.*
 /.idea*
-/gitignore*
+/.gitignore*
 /.git/*
 /node_modules
 /node_modules/*
