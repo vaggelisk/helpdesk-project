@@ -13,6 +13,7 @@
 /node_modules/*
 /public/bundles/
 /var/
+src/Migrations/Version20190711120317.php
 /vendor/
 ###< symfony/framework-bundle ###
 
