@@ -13,7 +13,8 @@
 /node_modules/*
 /public/bundles/
 /var/
-src/Migrations/Version20190711120317.php
+/src/Controller/VueController.php
+src/Controller/VueController.php
 /vendor/
 ###< symfony/framework-bundle ###
 
