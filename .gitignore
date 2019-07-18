@@ -11,7 +11,6 @@
 /.git/*
 /node_modules
 /node_modules/*
-/public/bundles/
 /var/
 /src/Controller/VueController.php
 src/Controller/VueController.php
