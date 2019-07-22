@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {#<meta charset="UTF-8">#}
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
@@ -16,7 +15,7 @@
         {#{% block body %}{% endblock %}#}
 
         <div id="app">
-            {% block body %}{% endblock %}
+            {% block vueContent %}{% endblock %}
         </div>
 
         <div id="footer">
@@ -26,7 +25,6 @@
         </div>
 
         {% block javascripts %}
-
             <script src="{{ asset('build/js/app.js') }}"></script>
         {% endblock %}
     </body>

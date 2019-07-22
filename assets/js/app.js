@@ -2,10 +2,11 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify'
 
-Vue.use(Vuetify)
-
 import Example from './components/Example'
 import Profile from './components/Profile'
+
+Vue.use(Vuetify)
+
 
 /**
  * Create a fresh Vue Application instance
