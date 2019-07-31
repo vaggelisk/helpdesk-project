@@ -306,6 +306,7 @@
         }
     </style>
 
+
     <div class="uv-navbar">
         <!-- Banner -->
         <div class="uv-mob-aside {% if app.request.cookies and app.request.cookies.get('uv-asideView') %} uv-mob-aside-collapsed{% endif %}">
@@ -577,49 +578,65 @@
             </div>
         </div>
 
+
         <div class="uv-actions">
             <!-- Profile Navigations -->
-            <span style="position: relative" class="">
-            <div class="uv-profile uv-dropdown-other">
-                {% if currentUserDetails is defined and currentUserDetails.thumbnail is defined and currentUserDetails.thumbnail is not empty %}
-                    <img class='uv-avatar' src="{{ app.request.scheme ~'://' ~ app.request.httpHost ~ asset('') }}{{ currentUserDetails.thumbnail }}"/>
-                {% else %}
-                    <img class='uv-avatar' src="{{ asset('bundles/uvdeskcore/images/uv-avatar-batman.png') }}"/>
-                {% endif %}
-
-            </div>
-
-            <div class="uv-dropdown-list uv-bottom-right uv-text-left">
-                <div class="uv-dropdown-container">
-
-                    <label>Signed in as </label>
-                        <p class="user-name">{{ currentUser.firstName }} {{ currentUser.lastName }}</p>
-                    <div role="none" class="dropdown-divider"></div>
-
-                    <ul>
-                        <li><a href="{{ path('edit_profile') }}" class='profiler'>Your Profile</a></li>
-                    </ul>
-
-                    <ul>
-                        <li data-action="create" class="uv-open-popup" data-target="create-ticket-modal">Create Ticket</li>
-                        {% if user_service.isAccessAuthorized('ROLE_AGENT_MANAGE_AGENT') %}
-                            <li><a href="{{ path('helpdesk_member_create_account') }}">Create Agent</a></li>
-                        {% endif %}
-                        {% if user_service.isAccessAuthorized('ROLE_AGENT_MANAGE_CUSTOMER') %}
-                            <li><a href="{{ path('helpdesk_member_create_customer_account') }}">Create Customer</a></li>
-                        {% endif %}
-
-                        <div role="none" class="dropdown-divider"></div>
-                        <li><a class="uv-text-danger" href="{{ path('helpdesk_member_handle_logout') }}">Sign Out</a></li>
-                    </ul>
+            <span style="position: relative" class="uv-profile-info">
+                <div>
+                    {{ currentUser.firstName[:1] }}. {{ currentUser.lastName }}
                 </div>
-            </div>
-        </span>
+                <div>
+                    WinGD
+                </div>
+            </span>
 
-             <span class="new">
-                <div class="uv-action-new uv-dropdown-other">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
-                    d="M20.000,12.000 L12.000,12.000 L12.000,20.000 L8.000,20.000 L8.000,12.000 L0.000,12.000 L0.000,8.000 L8.000,8.000 L8.000,-0.000 L12.000,-0.000 L12.000,8.000 L20.000,8.000 L20.000,12.000 Z"/></svg>
+            <span style="position: relative" class="">
+                <div class="uv-profile uv-dropdown-other">
+                    {% if currentUserDetails is defined and currentUserDetails.thumbnail is defined and currentUserDetails.thumbnail is not empty %}
+                        <img class='uv-avatar' src="{{ app.request.scheme ~'://' ~ app.request.httpHost ~ asset('') }}{{ currentUserDetails.thumbnail }}"/>
+                    {% else %}
+                        <img class='uv-avatar' src="{{ asset('bundles/uvdeskcore/images/uv-avatar-batman.png') }}"/>
+                    {% endif %}
+
+                </div>
+
+                <div class="uv-dropdown-list uv-bottom-right uv-text-left">
+                    <div class="uv-dropdown-container">
+
+                        <label>Signed in as </label>
+                            <p class="user-name">{{ currentUser.firstName }} {{ currentUser.lastName }}</p>
+                        <div role="none" class="dropdown-divider"></div>
+
+                        <ul>
+                            <li><a href="{{ path('edit_profile') }}" class='profiler'>Your Profile</a></li>
+                        </ul>
+
+                        <ul>
+                            <li data-action="create" class="uv-open-popup" data-target="create-ticket-modal">Create Ticket</li>
+                            {% if user_service.isAccessAuthorized('ROLE_AGENT_MANAGE_AGENT') %}
+                                <li><a href="{{ path('helpdesk_member_create_account') }}">Create Agent</a></li>
+                            {% endif %}
+                            {% if user_service.isAccessAuthorized('ROLE_AGENT_MANAGE_CUSTOMER') %}
+                                <li><a href="{{ path('helpdesk_member_create_customer_account') }}">Create Customer</a></li>
+                            {% endif %}
+
+                            <div role="none" class="dropdown-divider"></div>
+                            <li><a class="uv-text-danger" href="{{ path('helpdesk_member_handle_logout') }}">Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </span>
+
+            {#<span style="position: relative" class="uv-profile">#}
+                {#<div class="uv-action-notification uv-dropdown-other">#}
+                    {#<img class="uv-app-splash-image" src="{{ asset('bundles/uvdeskcore/images/burger_active_dark.png') }}" alt="m">#}
+                {#</div>#}
+            {#</span>#}
+
+
+             <span>
+                <div class="uv-action-burger uv-dropdown-other">
+                    <img class="uv-app-splash-image" src="{{ asset('bundles/uvdeskcore/images/burger_active_dark.png') }}" alt="m">
                 </div>
 
                 <div class="uv-dropdown-list uv-bottom-right uv-text-left">
@@ -627,7 +644,8 @@
                         <label>Create New</label>
                         <ul>
                             <li data-action="create" class="uv-open-popup" data-target="create-ticket-modal">Ticket</li>
-                            {% if user_service.isAccessAuthorized('ROLE_AGENT_MANAGE_AGENT') %}
+                            {% if user_service.isAccessAuthorized('ROLE_AGENT_
+                            MANAGE_AGENT') %}
                                 <li><a href="{{ path('helpdesk_member_create_account') }}">Agent</a></li>
                             {% endif %}
                             {% if user_service.isAccessAuthorized('ROLE_AGENT_MANAGE_CUSTOMER') %}
@@ -636,10 +654,13 @@
                         </ul>
                     </div>
                 </div>
-            </span>
+             </span>
         </div>
     </div>
 
+    {#{% block javascripts %}#}
+        {#<script src="{{ asset('build/js/app.js') }}"></script>#}
+    {#{% endblock %}#}
 
 <script type="text/template" id="notification_flags_temp">
     <% if (typeof undeliveredMessages != 'undefined') { %>

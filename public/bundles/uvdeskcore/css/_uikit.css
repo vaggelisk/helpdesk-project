@@ -2403,6 +2403,18 @@ kbd {
   vertical-align: middle;
   text-align: right;
 }
+.uv-paper .uv-navbar .uv-actions .uv-profile-info {
+  font-size: 15px;
+  display: inline-block;
+  color: white;
+  text-align: right;
+  vertical-align: middle;
+  /*cursor: pointer;*/
+  margin: 0px 25px 0px 30px;
+  position: relative;
+  padding: 15px 0px;
+  height: 70px;
+}
 .uv-paper .uv-navbar .uv-action-new {
   background-color: #2ED04C;
   width: 70px;
@@ -2420,12 +2432,43 @@ kbd {
 .uv-paper .uv-navbar .uv-action-new:active {
   opacity: .75;
 }
+.uv-paper .uv-navbar .uv-action-burger {
+  background-color: rgb(51, 82, 128);
+  width: 70px;
+  height: 68px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  padding: 25px;
+  vertical-align: middle;
+}
+.uv-paper .uv-navbar .uv-action-burger:hover {
+  background-color: rgb(51, 82, 100);
+}
+.uv-paper .uv-navbar .uv-action-notification {
+  background-color: rgb(51, 82, 128);
+  width: 70px;
+  height: 68px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  padding: 25px;
+  vertical-align: middle;
+}
+.uv-paper .uv-navbar .uv-action-notification:hover {
+  background-color: rgb(51, 82, 100);
+}
+.uv-paper .uv-navbar .uv-action-notification:active {
+  opacity: .75;
+}
 .uv-paper .uv-navbar .uv-profile {
   font-size: 15px;
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
-  margin: 0px 25px 0px 30px;
+  margin: 0px 5px 0px 5px;
   position: relative;
   padding: 15px 0px;
   height: 70px;
@@ -2434,9 +2477,9 @@ kbd {
   display: inline-block;
   vertical-align: middle;
   text-align: left;
-  min-width: 50px;
+  min-width: 10px;
   position: relative;
-  margin-right: 15px;
+  margin-right: 5px;
 }
 .uv-paper .uv-navbar .uv-avatar {
   display: inline-block;

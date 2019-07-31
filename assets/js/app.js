@@ -4,6 +4,7 @@ import Vuetify from 'vuetify'
 
 import Example from './components/Example'
 import Profile from './components/Profile'
+import Topbar  from './components/Topbar'
 
 Vue.use(Vuetify)
 
@@ -13,5 +14,5 @@ Vue.use(Vuetify)
  */
 new Vue({
     el: '#app',
-    components: {Example, Profile}
+    components: {Example, Profile, Topbar, }
 });
